@@ -1,4 +1,4 @@
-function TestController(adminActions) {
+function TestController(adminActions, adminMenu) {
     adminActions('message').add({
         user: {
             img: '../bower_components/admin-lte/dist/img/user2-160x160.jpg'
@@ -14,6 +14,9 @@ function TestController(adminActions) {
         title: "Design some buttons",
         percentComplete: 20
     });
+    
+    adminMenu.addMenu('Link', function (item) { console.log(item.text);});
+    adminMenu.addMenu('Another link', function (item) { console.log(item.text);});
 }
 
 angular.module('app', ['wt.admin'])
