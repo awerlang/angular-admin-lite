@@ -1,0 +1,37 @@
+  <li class="dropdown messages-menu">
+    <!-- Menu toggle button -->
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+      <i class="fa fa-envelope-o"></i>
+      <span class="label label-success">{{ctrl.messages.length}}</span>
+    </a>
+    <ul class="dropdown-menu">
+      <li class="header">
+        <ng-pluralize count="ctrl.messages.length"
+                 when="{'0': 'No messages here',
+                     'one': 'You have just one message',
+                     'other': 'You have {} messages'}">
+        </ng-pluralize>
+      </li>
+      <li>
+        <!-- inner menu: contains the messages -->
+        <ul class="menu">
+          <li ng-repeat="item in ctrl.messages"><!-- start message -->
+            <a href="#">
+              <div class="pull-left">
+                <!-- User Image -->
+                <img ng-src="{{::item.user.img}}" class="img-circle" alt="User Image"/>
+              </div>
+              <!-- Message title and timestamp -->
+              <h4>
+                {{::item.title}}
+                <small><i class="fa fa-clock-o"></i> {{item.timestamp}}</small>
+              </h4>
+              <!-- The message -->
+              <p>{{item.message}}</p>
+            </a>
+          </li><!-- end message -->
+        </ul><!-- /.menu -->
+      </li>
+      <li class="footer"><a href="#">See All Messages</a></li>
+    </ul>
+  </li><!-- /.messages-menu -->
