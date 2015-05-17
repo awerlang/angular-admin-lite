@@ -1,3 +1,3 @@
 angular.module('wt.admin', [])
-	.factory('messagesService', MessagesService)
-	.directive('lteMessagesMenu', MessagesMenu);
+	.factory('adminActions', AdminActions)
+	.directive('lteActionsMenu', ActionsMenu);

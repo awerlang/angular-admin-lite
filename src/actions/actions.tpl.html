@@ -1,8 +1,8 @@
-  <li class="dropdown messages-menu">
+  <li>
     <!-- Menu toggle button -->
     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-      <i class="fa fa-envelope-o"></i>
-      <span class="label label-success">{{ctrl.messages.length}}</span>
+      <i class="{{ctrl.iconClass}}"></i>
+      <span class="label {{ctrl.badgeClass}}">{{ctrl.messages.length}}</span>
     </a>
     <ul class="dropdown-menu">
       <li class="header">
@@ -16,18 +16,8 @@
         <!-- inner menu: contains the messages -->
         <ul class="menu">
           <li ng-repeat="item in ctrl.messages"><!-- start message -->
-            <a href="#">
-              <div class="pull-left">
-                <!-- User Image -->
-                <img ng-src="{{::item.user.img}}" class="img-circle" alt="User Image"/>
-              </div>
-              <!-- Message title and timestamp -->
-              <h4>
-                {{::item.title}}
-                <small><i class="fa fa-clock-o"></i> {{item.timestamp}}</small>
-              </h4>
-              <!-- The message -->
-              <p>{{item.message}}</p>
+            <a href="#" ng-include="'../src/actions/'+ctrl.lteActionsMenu+'.tpl.html'">
+              
             </a>
           </li><!-- end message -->
         </ul><!-- /.menu -->

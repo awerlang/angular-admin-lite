@@ -1,0 +1,12 @@
+  <!-- Task title and progress text -->
+  <h3>
+    {{::item.title}}
+    <small class="pull-right">{{::item.percentComplete}}%</small>
+  </h3>
+  <!-- The progress bar -->
+  <div class="progress xs">
+    <!-- Change the css width attribute to simulate progress -->
+    <div class="progress-bar progress-bar-aqua" style="width: {{::item.percentComplete}}%" role="progressbar" aria-valuenow="{{::item.percentComplete}}" aria-valuemin="0" aria-valuemax="100">
+      <span class="sr-only">{{::item.percentComplete}}% Complete</span>
+    </div>
+  </div>

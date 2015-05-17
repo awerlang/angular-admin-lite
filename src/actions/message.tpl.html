@@ -1,0 +1,11 @@
+<div class="pull-left">
+  <!-- User Image -->
+  <img ng-src="{{::item.user.img}}" class="img-circle" alt="User Image"/>
+</div>
+<!-- Message title and timestamp -->
+<h4>
+  {{::item.title}}
+  <small><i class="fa fa-clock-o"></i> {{item.timestamp}}</small>
+</h4>
+<!-- The message -->
+<p>{{item.message}}</p>
