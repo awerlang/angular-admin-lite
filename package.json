@@ -1,0 +1,25 @@
+{
+  "name": "angular-admin-lite",
+  "version": "0.1.0",
+  "description": "Simple admin interface for Angular",
+  "main": "angular-admin-lite.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/awerlang/angular-admin-lite.git"
+  },
+  "keywords": [
+    "angular",
+    "admin",
+    "adminlte",
+    "cockpit"
+  ],
+  "author": "André Werlang",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/awerlang/angular-admin-lite/issues"
+  },
+  "homepage": "https://github.com/awerlang/angular-admin-lite"
+}
