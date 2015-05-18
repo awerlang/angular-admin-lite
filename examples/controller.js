@@ -1,4 +1,4 @@
-function TestController(adminActions, adminMenu) {
+function TestController(adminActions, adminMenu, adminUser) {
     adminActions('message').add({
         user: {
             img: '../bower_components/admin-lte/dist/img/user2-160x160.jpg'
@@ -17,6 +17,21 @@ function TestController(adminActions, adminMenu) {
     
     adminMenu.addMenu('Link', function (item) { console.log(item.text);});
     adminMenu.addMenu('Another link', function (item) { console.log(item.text);});
+    
+    adminUser.setCurrentUser({
+		img: '../bower_components/admin-lte/dist/img/user2-160x160.jpg',
+		name: 'Alexander Pierce',
+		role: 'Web Developer',
+		subtitle: 'Member since Nov. 2012',
+        online: false,
+        
+        goToProfile: function () {
+            console.log('profile');
+        },
+        signOut: function () {
+            console.log('signout');
+        }
+	});
 }
 
 angular.module('app', ['wt.admin'])

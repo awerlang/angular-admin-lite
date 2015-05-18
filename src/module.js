@@ -3,4 +3,7 @@ angular.module('wt.admin', [])
 	.directive('lteActionsMenu', ActionsMenu)
 	
 	.factory('adminMenu', AdminMenu)
-	.directive('lteSideMenu', AdminSideMenu);
+	.directive('lteSideMenu', AdminSideMenu)
+	
+	.factory('adminUser', AdminUser)
+	.directive('lteUserMenu', UserMenu);

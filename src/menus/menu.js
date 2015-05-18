@@ -1,6 +1,6 @@
 "use strict";
 
-function AdminSideMenu(adminMenu) {
+function AdminSideMenu(adminMenu, adminUser) {
 	return {
 		restrict: 'A',
 		replace: true,
@@ -9,6 +9,8 @@ function AdminSideMenu(adminMenu) {
 		bindToController: true,
 		controllerAs: 'ctrl',
 		controller: function () {
+			this.user = adminUser.getCurrentUser();
+			
 			var lastActive = {};
 			this.menus = adminMenu.getMenus();
 			this.menuClicked = function (item) {
